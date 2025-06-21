@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService, Task } from '../../service/task.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; // <-- IMPORTANTE
 
 @Component({
+  standalone: true,
   selector: 'app-task-list',
   templateUrl: './task-list.html',
   styleUrls: ['./task-list.css'],
-  imports: [CommonModule,FormsModule ],
+  imports: [CommonModule,FormsModule, RouterModule],
   
 })
 export class TaskListComponent implements OnInit {
@@ -27,7 +28,7 @@ export class TaskListComponent implements OnInit {
     });
   }
 
-  deleteTask(id: number) {
+  deleteTask(id: number | undefined) {
     // Aquí pones la lógica de eliminar
     console.log('Eliminar tarea con id:', id);
     // Podrías agregar el delete real cuando tengas el método en el servicio:
