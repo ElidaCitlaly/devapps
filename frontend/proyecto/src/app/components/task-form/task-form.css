@@ -1,0 +1,22 @@
+form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+}
+
+button {
+  margin-right: 10px;
+}

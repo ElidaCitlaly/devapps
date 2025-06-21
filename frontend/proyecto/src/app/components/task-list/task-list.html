@@ -1,0 +1,11 @@
+<h1>Lista de Tareas</h1>
+
+<button [routerLink]="['/tasks/edit/' + task.id]">Editar</button>
+
+<ul>
+  <li *ngFor="let task of tasks">
+    <strong>{{ task.title }}</strong> - {{ task.description }}
+    <button [routerLink]="['/tasks/edit', task.id]">Editar</button>
+    <button (click)="deleteTask(task.id)">Eliminar</button>
+  </li>
+</ul>
